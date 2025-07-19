@@ -1,3 +1,14 @@
+import React from 'react';
+import { AnimatePresence } from 'framer-motion';
+import OverviewTab from './tabs/OverviewTab';
+import CharactersTab from './tabs/CharactersTab';
+import BooksTab from './tabs/BooksTab';
+import ActivitiesTab from './tabs/ActivitiesTab';
+
+interface TabContentProps {
+  activeTab: string;
+}
+
 const TabContent: React.FC<TabContentProps> = ({ activeTab }) => {
   return (
     <main 
@@ -16,3 +27,5 @@ const TabContent: React.FC<TabContentProps> = ({ activeTab }) => {
     </main>
   );
 };
+
+export default TabContent;
