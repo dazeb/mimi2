@@ -1,16 +1,26 @@
-@@ .. @@
-   return (
-     <aside role="complementary" aria-label="Content navigation tabs">
-       <div className="flex flex-wrap justify-center gap-4 mb-8">
-         {tabs.map((tab, index) => (
-           <motion.button
-             key={tab}
-             onClick={() => onTabChange(tab)}
-             className={`px-6 py-3 rounded-full font-medium transition-all duration-200 relative overflow-hidden ${
-               activeTab === tab
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-xl'
-                : 'bg-white text-gray-800 hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 hover:text-purple-700 border-2 border-purple-200'
-             }`}
+import React from 'react';
+import { motion } from 'framer-motion';
+
+interface TabNavigationProps {
+  activeTab: string;
+  onTabChange: (tab: string) => void;
+}
+
+const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onTabChange }) => {
+  const tabs = ['overview', 'characters', 'books', 'activities'];
+
+  return (
+    <aside role="complementary" aria-label="Content navigation tabs">
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {tabs.map((tab, index) => (
+          <motion.button
+            key={tab}
+            onClick={() => onTabChange(tab)}
+            className={`px-6 py-3 rounded-full font-medium transition-all duration-200 relative overflow-hidden ${
+              activeTab === tab
+               ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-xl'
+               : 'bg-white text-gray-800 hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 hover:text-purple-700 border-2 border-purple-200'
+            }`}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
@@ -20,7 +30,7 @@
             role="tab"
             aria-controls={`${tab}-panel`}
             id={`${tab}-tab`}
-           >
+          >
             {/* Sparkle effect for active tab */}
             {activeTab === tab && (
               <motion.div
@@ -29,9 +39,16 @@
                 transition={{ duration: 2, repeat: Infinity }}
               />
             )}
-             {tab.charAt(0).toUpperCase() + tab.slice(1)}
-           </motion.button>
-         ))}
-       </div>
-     </aside>
-   );
+            {tab === 'overview' && '🏠 '}
+            {tab === 'characters' && '👫 '}
+            {tab === 'books' && '📚 '}
+            {tab === 'activities' && '🎨 '}
+            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+          </motion.button>
+        ))}
+      </div>
+    </aside>
+  );
+};
+
+export default TabNavigation;
