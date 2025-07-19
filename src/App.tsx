@@ -71,8 +71,8 @@ function App() {
   const [activeTab, setActiveTab] = useState<'overview' | 'characters' | 'books'>('overview');
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
+    <div 
+      className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50"
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50"
@@ -858,9 +858,6 @@ function App() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
               <Cat className="w-6 h-6 text-orange-600" />
               <span className="text-lg font-bold text-gray-800">The Mimi & Ashlie Adventure Series</span>
               <Heart className="w-6 h-6 text-pink-600" />
@@ -871,7 +868,7 @@ function App() {
           </div>
         </div>
       </motion.footer>
-    </motion.div>
+    </div>
   );
 }
 

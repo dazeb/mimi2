@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
           alt="Children with books - literacy background" 
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-100/90 via-purple-50/90 to-pink-100/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50/95 via-pink-50/95 to-orange-50/95"></div>
         
         {/* Floating Cartoon Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
