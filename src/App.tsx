@@ -867,6 +867,7 @@ function App() {
             </p>
           </div>
         </div>
+        </motion.footer>
       </motion.footer>
     </div>
   );
