@@ -9,6 +9,8 @@ const ActivitiesTab: React.FC = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
       transition={{ duration: 0.3 }}
+      role="region"
+      aria-label="Interactive activities"
     >
       <motion.h3 
         className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-8 text-center"

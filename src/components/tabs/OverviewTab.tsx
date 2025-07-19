@@ -9,6 +9,8 @@ const OverviewTab: React.FC = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
       transition={{ duration: 0.3 }}
+      role="region"
+      aria-label="Series overview content"
     >
       <motion.h3 
         className="text-xl font-bold mb-2"
