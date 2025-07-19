@@ -5,6 +5,7 @@ import TabContent from './TabContent';
 
  const InteractiveGuide: React.FC = () => {
    const [activeTab, setActiveTab] = useState('overview');
+ }
  
    return (
     <section role="region" aria-labelledby="guide-heading" className="py-16 px-4 bg-white">
