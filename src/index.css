@@ -1,3 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom animations for children's design */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-3deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(20px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes twinkle-delayed {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+@keyframes sway-delayed {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-twinkle-delayed {
+  animation: twinkle-delayed 2.5s ease-in-out infinite;
+}
+
+.animate-sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.animate-sway-delayed {
+  animation: sway-delayed 3s ease-in-out infinite;
+}
+
+/* Custom colors for children's theme */
+.bg-peach-100 { background-color: #fef2f2; }
+.bg-peach-200 { background-color: #fecaca; }
+.bg-peach-300 { background-color: #fca5a5; }
+.bg-peach-400 { background-color: #f87171; }
+.from-peach-100 { --tw-gradient-from: #fef2f2; }
+.from-peach-200 { --tw-gradient-from: #fecaca; }
+.to-peach-300 { --tw-gradient-to: #fca5a5; }
+.to-peach-400 { --tw-gradient-to: #f87171; }
+
+.bg-brown-400 { background-color: #a3a3a3; }
+.bg-brown-500 { background-color: #737373; }
+.bg-brown-600 { background-color: #525252; }
+.from-brown-400 { --tw-gradient-from: #a3a3a3; }
+.to-brown-600 { --tw-gradient-to: #525252; }
+.border-brown-600 { border-color: #525252; }
