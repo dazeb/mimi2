@@ -10,8 +10,8 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onTabChange })
   const tabs = ['overview', 'characters', 'books', 'activities'];
 
   return (
-    <aside role="complementary" aria-label="Content navigation tabs">
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
+    <nav role="tablist" aria-label="Adventure guide navigation" className="mb-8">
+      <div className="flex flex-wrap justify-center gap-4">
         {tabs.map((tab, index) => (
           <motion.button
             key={tab}
@@ -26,10 +26,11 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onTabChange })
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            aria-pressed={activeTab === tab}
+            aria-selected={activeTab === tab}
             role="tab"
             aria-controls={`${tab}-panel`}
             id={`${tab}-tab`}
+            tabIndex={activeTab === tab ? 0 : -1}
           >
             {/* Sparkle effect for active tab */}
             {activeTab === tab && (
@@ -47,7 +48,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onTabChange })
           </motion.button>
         ))}
       </div>
-    </aside>
+    </nav>
   );
 };
 

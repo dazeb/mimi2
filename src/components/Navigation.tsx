@@ -4,7 +4,7 @@ import { Cat, Star } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   return (
-    <nav role="navigation" aria-label="Main navigation" className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white shadow-xl relative overflow-hidden">
+    <nav role="navigation" aria-label="Main site navigation" className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white shadow-xl relative overflow-hidden">
       {/* Cartoon Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-2 left-10 w-6 h-6 bg-white rounded-full"></div>
@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
             >
               <Cat className="w-8 h-8 drop-shadow-lg" />
             </motion.div>
-            <h1 className="text-2xl font-bold">The Mimi & Ashlie Adventure Series</h1>
+            <h1 className="text-2xl font-bold" id="site-title">The Mimi & Ashlie Adventure Series</h1>
             <motion.div
               animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
               transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}
@@ -45,6 +45,7 @@ const Navigation: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
+          aria-describedby="site-title"
         >
           Heartwarming adventures of a clever cat and her loving human sister as they discover that
           the biggest adventures can happen right in their own backyard! 🏡✨

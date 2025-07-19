@@ -4,7 +4,7 @@ import { Cat, Star } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
-    <section aria-labelledby="hero-heading" className="relative py-20 px-4 overflow-hidden">
+    <section role="region" aria-labelledby="hero-heading" className="relative py-20 px-4 overflow-hidden">
       <h2 id="hero-heading" className="sr-only">Welcome to Mimi & Ashlie Adventure Series</h2>
       
       {/* Background Image */}

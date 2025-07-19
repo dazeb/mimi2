@@ -77,6 +77,14 @@ function App() {
       transition={{ duration: 0.8 }}
       className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50"
     >
+      {/* Skip to main content link for screen readers */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-md z-50"
+      >
+        Skip to main content
+      </a>
+      
       {/* Header */}
       <motion.header 
         initial={{ y: -50, opacity: 0 }}
@@ -866,8 +874,12 @@ function App() {
             <p className="text-gray-600">
               Creating magical moments and meaningful lessons for young readers and their families.
             </p>
-          </div>
-        </div>
+      
+      <main id="main-content" role="main" aria-label="Main content">
+        <HeroSection />
+        <InteractiveGuide />
+      </main>
+      
       </motion.footer>
     </motion.div>
   );

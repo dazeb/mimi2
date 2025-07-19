@@ -9,11 +9,10 @@ const CharactersTab: React.FC = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
       transition={{ duration: 0.3 }}
-      role="region"
-      aria-label="Character information"
     >
       <motion.h3 
         className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-8 text-center"
+        id="characters-heading"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -21,13 +20,15 @@ const CharactersTab: React.FC = () => {
         🌟 Meet Our Characters 🌟
       </motion.h3>
       
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8" role="group" aria-labelledby="characters-heading">
         <motion.div 
           className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg border-2 border-purple-200"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
           whileHover={{ scale: 1.05, rotateY: 5 }}
+          role="article"
+          aria-labelledby="mimi-heading"
         >
           <motion.div
             whileHover={{ scale: 1.1, rotate: 5 }}
