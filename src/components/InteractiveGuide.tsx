@@ -1,3 +1,8 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import TabNavigation from './TabNavigation';
+import TabContent from './TabContent';
+
  const InteractiveGuide: React.FC = () => {
    const [activeTab, setActiveTab] = useState('overview');
  
@@ -23,4 +28,5 @@
        </div>
      </section>
    );
-};
+
+export default InteractiveGuide;
