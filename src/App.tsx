@@ -739,12 +739,6 @@ function App() {
                     theme: "Facing Fears & Understanding Wildlife",
                     color: "bg-indigo-100 border-indigo-300 text-indigo-800"
                   },
-       {
-                    title: "The Mystery of the Midnight Sounds",
-                    summary: "Strange noises at night worry Ashlie, but Mimi's detective skills help them discover it's just a family of raccoons.",
-                    theme: "Facing Fears & Understanding Wildlife",
-                    color: "bg-indigo-100 border-indigo-300 text-indigo-800"
-                  },
                   {
                     title: "Ashlie's Big Helper Day",
                     summary: "When Mom gets sick, Ashlie wants to take care of everything but feels overwhelmed until Mimi shows her that asking for help is brave.",
@@ -874,12 +868,8 @@ function App() {
             <p className="text-gray-600">
               Creating magical moments and meaningful lessons for young readers and their families.
             </p>
-      
-      <main id="main-content" role="main" aria-label="Main content">
-        <HeroSection />
-        <InteractiveGuide />
-      </main>
-      
+          </div>
+        </div>
       </motion.footer>
     </motion.div>
   );
