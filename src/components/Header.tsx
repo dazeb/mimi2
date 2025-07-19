@@ -1,4 +1,3 @@
-@@ .. @@
  const Header: React.FC = () => {
    return (
 -    <div className="w-full h-48 bg-gradient-to-r from-amber-100 to-orange-100 flex items-center justify-center overflow-hidden">
